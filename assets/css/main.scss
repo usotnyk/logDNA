@@ -1,0 +1,49 @@
+h1 {
+  border: 3px solid red;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4A4A4A;
+  margin: 0;
+}
+
+header {
+  border: 1px solid green;
+  min-height: 50px;
+}
+
+.main-container {
+  padding-left: 60px;
+  display: flex;
+
+  .list-group {
+    width: 260px;
+  }
+
+  .tab-content {
+    flex-grow: 1;
+  }
+}
+
+aside {
+  position: fixed;
+  left: 0;
+  width: 60px;
+  background-color: #333333;
+  bottom: 0;
+  top: 50px;
+  text-align: center;
+
+  .channel-tab {
+    width: 43px;
+    height: 43px;
+    background-color: #F0F0F1;
+    margin: 15px auto;
+    border-radius: 6px;
+  }
+}
+
