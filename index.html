@@ -10,11 +10,14 @@
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="/assets/js/main.js"></script> -->
+    <script type="text/javascript" src="/assets/js/main.js"></script>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
     <link href="/dist/main.min.css" rel="stylesheet">
   </head>
 
@@ -22,26 +25,59 @@
     <header>Header Nav</header>
     <main>
       <aside>
-        <div class="channel-tab">1</div>
-        <div class="channel-tab">2</div>
-        <div class="channel-tab">3</div>
+        <div class="list-group" id="workspaceList" role="tablist">
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#workspace1" role="tab">
+              <div class="workspace-tab">
+                <span class="workspace-icon"></span>
+                <i class="fab fa-slack"></i>
+                <span class="workspace-counter">1</span>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workspace2" role="tab">
+              <div class="workspace-tab">
+                  <span class="workspace-icon"></span>
+                  <i class="fab fa-slack"></i>
+                  <span class="workspace-counter">2</span>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workspace3" role="tab">
+              <div class="workspace-tab">
+                  <span class="workspace-icon"></span>
+                  <i class="fab fa-slack"></i>
+                  <span class="workspace-counter">3</span>
+              </div>
+              </a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workspace4" role="tab">
+              <div class="workspace-tab">
+                  <span class="workspace-icon"></span>
+                  <i class="fab fa-slack"></i>
+                  <span class="workspace-counter">4</span>
+              </div>
+            </a>
+        </div>
       </aside>
-      <div class="main-container">
-        <!-- List group -->
-        <div class="list-group" id="channelList" role="tablist">
-          <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-          <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-          <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-          <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+      <div class="tab-content workspace-tabs">
+        <div class="main-container tab-pane active one" id="workspace1">
+          <!-- List group -->
+          <div class="list-group" id="channelList" role="tablist">
+            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+          </div>
+          <!-- Tab panes -->
+          <div class="tab-content channel-tabs">
+            <div class="tab-pane active" id="home" role="tabpanel">Content 1</div>
+            <div class="tab-pane" id="profile" role="tabpanel">Content 2</div>
+            <div class="tab-pane" id="messages" role="tabpanel">Content 3</div>
+            <div class="tab-pane" id="settings" role="tabpanel">Content 4</div>
+          </div>
         </div>
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div class="tab-pane active" id="home" role="tabpanel">Content 1</div>
-          <div class="tab-pane" id="profile" role="tabpanel">Content 2</div>
-          <div class="tab-pane" id="messages" role="tabpanel">Content 3</div>
-          <div class="tab-pane" id="settings" role="tabpanel">Content 4</div>
-        </div>
+        <div class="main-container tab-pane" id="workspace2">Workspace 2</div>
+        <div class="main-container tab-pane" id="workspace3">Workspace 3</div>
+        <div class="main-container tab-pane" id="workspace4">Workspace 4</div>
       </div>
+      
     </main>
   </body>
 </html>
