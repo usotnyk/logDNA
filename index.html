@@ -23,61 +23,45 @@
 
   <body>
     <header>Header Nav</header>
-    <main>
+    <div class="error-message">
+      <div class="alert alert-danger" role="alert">
+          Something went wrong, try reloading the page.
+        </div>
+    </div>
+    <main class="loading">
       <aside>
         <div class="list-group" id="workspaceList" role="tablist">
-            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#workspace1" role="tab">
+            <a class="list-group-item list-group-item-action" id="cloneWorkspaceTab" data-toggle="list" href="#workspace1" role="tab">
               <div class="workspace-tab">
                 <span class="workspace-icon"></span>
                 <i class="fab fa-slack"></i>
                 <span class="workspace-counter">1</span>
               </div>
             </a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workspace2" role="tab">
-              <div class="workspace-tab">
-                  <span class="workspace-icon"></span>
-                  <i class="fab fa-slack"></i>
-                  <span class="workspace-counter">2</span>
-              </div>
-            </a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workspace3" role="tab">
-              <div class="workspace-tab">
-                  <span class="workspace-icon"></span>
-                  <i class="fab fa-slack"></i>
-                  <span class="workspace-counter">3</span>
-              </div>
-              </a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workspace4" role="tab">
-              <div class="workspace-tab">
-                  <span class="workspace-icon"></span>
-                  <i class="fab fa-slack"></i>
-                  <span class="workspace-counter">4</span>
-              </div>
-            </a>
         </div>
       </aside>
-      <div class="tab-content workspace-tabs">
-        <div class="main-container tab-pane active one" id="workspace1">
+      <div class="main-container tab-content workspace-tabs" id="workspaceTabsContent">
+        <div class="tab-pane" id="cloneWorkspaceTabContent">
           <!-- List group -->
           <div class="list-group" id="channelList" role="tablist">
-            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="" role="tab" id="cloneChannelTab">
+              <h4></h4>
+              <p class="sub-header"></p>
+            </a>
           </div>
           <!-- Tab panes -->
-          <div class="tab-content channel-tabs">
-            <div class="tab-pane active" id="home" role="tabpanel">Content 1</div>
-            <div class="tab-pane" id="profile" role="tabpanel">Content 2</div>
-            <div class="tab-pane" id="messages" role="tabpanel">Content 3</div>
-            <div class="tab-pane" id="settings" role="tabpanel">Content 4</div>
+          <div class="tab-content channel-tabs" id="channelTabsContent">
+            <div class="tab-pane" id="cloneChannelTabContent" role="tabpanel"></div>
           </div>
         </div>
-        <div class="main-container tab-pane" id="workspace2">Workspace 2</div>
-        <div class="main-container tab-pane" id="workspace3">Workspace 3</div>
-        <div class="main-container tab-pane" id="workspace4">Workspace 4</div>
       </div>
-      
+      <div class="form-wrapper">
+        <form>
+          <label>
+              <input type="text" value="" placeholder="Type a Message...">
+          </label>
+        </form>
+      </div>
     </main>
   </body>
 </html>
