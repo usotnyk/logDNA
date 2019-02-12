@@ -1,20 +1,20 @@
-var detailViewTemplate1 = "<h1>Excepteur sint occaecat cupidatat non proident.<h1>"
+var detailViewTemplate1 = "<h2>Excepteur sint occaecat cupidatat non proident.<h2>"
 detailViewTemplate1 +=    "<h3><em>Duis aute irure dolor in reprehenderit.</em></h3>"
 detailViewTemplate1 +=    "<hr>"
 detailViewTemplate1 +=    "<p><span class='first-letter'>N</span>am libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>"
-detailViewTemplate1 += "<img width='500' height='200' alt='Placeholder' class='text-center' src='https://via.placeholder.com/500x200' />"
-detailViewTemplate1 += "<div class='img-description'>At vero eos et accusamus et iusto.</div>"
+detailViewTemplate1 +=    "<img width='500' height='200' alt='Placeholder' class='text-center' src='https://via.placeholder.com/500x200' />"
+detailViewTemplate1 +=    "<div class='img-description'>At vero eos et accusamus et iusto.</div>"
 detailViewTemplate1 +=    "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>"
 
-var detailViewTemplate2 = "<h1>Duis aute irure dolor in reprehenderit.<h1>"
+var detailViewTemplate2 = "<h2>Duis aute irure dolor in reprehenderit.<h2>"
 detailViewTemplate2 +=    "<h3><em>Excepteur sint occaecat cupidatat non proident.</em></h3>"
 detailViewTemplate2 +=    "<hr>"
 detailViewTemplate2 +=    "<p><span class='first-letter'>S</span>ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>"
-detailViewTemplate2 += "<img width='300' height='200' alt='Placeholder' class='text-center' src='https://via.placeholder.com/300x200' />"
-detailViewTemplate2 += "<div class='img-description'>At vero eos et accusamus et iusto.</div>"
+detailViewTemplate2 +=    "<img width='300' height='200' alt='Placeholder' class='text-center' src='https://via.placeholder.com/300x200' />"
+detailViewTemplate2 +=    "<div class='img-description'>At vero eos et accusamus et iusto.</div>"
 detailViewTemplate2 +=    "<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>"
-detailViewTemplate2 += "<img width='300' height='300' alt='Placeholder' class='text-center' src='https://via.placeholder.com/300x200' />"
-detailViewTemplate2 += "<div class='img-description'>At vero eos et accusamus et iusto.</div>"
+detailViewTemplate2 +=    "<img width='300' height='300' alt='Placeholder' class='text-center' src='https://via.placeholder.com/300x200' />"
+detailViewTemplate2 +=    "<div class='img-description'>At vero eos et accusamus et iusto.</div>"
 
 function renderError() {
   $('.error-message').show();
