@@ -29,9 +29,9 @@ function browserSyncReload(done) {
 }
 
 // Clean assets
-function clean() {
-  return del(["./assets/"]);
-}
+// function clean() {
+//   return del(["./assets/"]);
+// }
 
 // CSS task
 function css() {
@@ -58,7 +58,7 @@ function watchFiles() {
 }
 
 // define complex tasks
-const build = gulp.series(clean, gulp.parallel(css));
+const build = gulp.series(gulp.parallel(css));
 const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
