@@ -41,8 +41,46 @@ header {
   -webkit-box-shadow: 0px 1px 18px -6px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 1px 18px -6px rgba(0,0,0,0.75);
   box-shadow: 0px 1px 18px -6px rgba(0,0,0,0.75);
-  display: flex;
-  align-items: center;
+
+  .navbar {
+    padding: 0;
+    .navbar-toggler {
+      margin: 0 20px;
+      border: none;
+      font-size: 1.7rem;
+      &.minor-menu {
+        .fas.fa-chevron-down {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      background-color: #FFFFFF;
+      border-radius: 4px;
+      border: 1px solid #EDEDED;
+      position: absolute;
+      top: 64px;
+      right: 11px;
+      width: 200px;
+      padding: 10px 20px;
+      -webkit-box-shadow: 0px 1px 18px -6px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 1px 18px -6px rgba(0,0,0,0.75);
+      box-shadow: 0px 1px 18px -6px rgba(0,0,0,0.75);
+
+      .nav-link {
+        .fas {
+          padding: 0 10px;
+          color: $feature-color;
+        }
+      }
+    }
+  }
+
+  .branding-wrapper {
+    display: flex;
+    align-items: center;
+  }
 
   .logo-wrapper {
     background-color: $feature-color;
@@ -238,4 +276,127 @@ aside {
     }
   }
 
+}
+
+.mobile-menu-btn-wrapper {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+
+  body { font-size: 13px; }
+  h1 { 
+    font-size: 1.3rem;
+    padding: 0 7px;
+  }
+
+  header {
+    .navbar {
+      .navbar-toggler {
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        &.minor-menu {
+          .fas.fa-chevron-down {
+            display: initial;
+            color: rgba(0,0,0,.5);
+          }
+          .fas.fa-bars {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .mobile-menu-btn-wrapper {
+    height: 65px;
+    display: flex;
+    background-color: $feature-color;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      max-height: 80%;
+      max-width: 80%;
+    }
+  }
+  header .navbar .navbar-toggler {
+    margin: 0 5px;
+  }
+  aside {
+    position: absolute;
+    left: -360px;
+    // -webkit-transform: translate3d(-360px,0px,0);
+    // transform: translate3d(-360px,0px,0);
+    // -webkit-transition: -webkit-transform 0.8s;
+    // transition: transform 0.8s;
+    -webkit-transform: translate3d(-360px,0px,0);
+    transform: translate3d(-360px,0px,0);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+
+  .main-container .tab-pane .list-group {
+    position: absolute;
+    width: 300px;
+    left: -300px;
+    // -webkit-transform: translate3d(-350px,0px,0);
+    // transform: translate3d(-350px,0px,0);
+    // -webkit-transition: -webkit-transform 0.8s;
+    // transition: transform 0.8s;
+    -webkit-transform: translate3d(-360px,0px,0);
+    transform: translate3d(-360px,0px,0);
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  }
+
+  .main-container .tab-pane .tab-content {
+    margin-left: 0;
+    transition: all 0.8s ease;
+    width: auto;
+  }
+
+  .main-container {
+    padding-left: 0px;
+    transition: all 0.8s ease;
+  }
+
+  .form-wrapper {
+    left: 0px;
+    transition: all 0.8s ease;
+  }
+
+  .show-menu {
+    aside {
+      left: 0px;
+      -webkit-transform: translate3d(0,0px,0);
+      transform: translate3d(0,0px,0);
+      -webkit-transition: -webkit-transform 0.8s;
+      transition: transform 0.8s;
+      z-index: 999;
+    }
+  
+    .main-container .tab-pane .list-group {
+      left: 60px;
+      -webkit-transform: translate3d(0,0px,0);
+      transform: translate3d(0,0px,0);
+      -webkit-transition: -webkit-transform 0.8s;
+      transition: transform 0.8s;
+      -webkit-box-shadow: 0px 1px 18px -4px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 1px 18px -4px rgba(0,0,0,0.75);
+      box-shadow: 0px 1px 18px -4px rgba(0,0,0,0.75);
+      z-index: 999;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    h1 { display: none; }
+  }
 }

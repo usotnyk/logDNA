@@ -127,11 +127,39 @@ $(document).ready(function() {
   var contentData = generateContentData({workspaces: 4, channels: 25});
 
   if(contentData && contentData.length > 0) {
+
     renderWorkspaceTabs(contentData);
-    removeLoader('main');
+    // Display loader while imitating fetching data
+    setTimeout(function(){ removeLoader('main'); }, 1000);    
   }
   else {
     $('main').hide();
     renderError();
   }
+
+  var bodyElement = document.body,
+    openbtn = document.getElementById( 'mobile-menu-open' ),
+    isOpen = false;
+  
+    function closeMenu() {
+      $(bodyElement).removeClass('show-menu');
+    }
+    
+    function toggleMenu() {
+      if( isOpen ) {
+        closeMenu();
+      }
+      else {
+        $(bodyElement).addClass('show-menu');
+      }
+      isOpen = !isOpen;
+    }
+    
+    function initMobileMenu() {
+      openbtn.addEventListener( 'click', toggleMenu );
+    }
+
+  initMobileMenu();
+
+
 })
