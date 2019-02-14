@@ -4,7 +4,7 @@
 const autoprefixer = require("autoprefixer");
 const browsersync = require("browser-sync").create();
 const cssnano = require("cssnano");
-const del = require("del");
+// const del = require("del");
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
@@ -63,7 +63,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
 exports.css = css;
-exports.clean = clean;
+// exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
